@@ -1,2 +1,5 @@
 fastapi
+google-adk
+google-auth
+requests
 uvicorn
