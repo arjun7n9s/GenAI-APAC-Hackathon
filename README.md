@@ -1,18 +1,26 @@
-# FlowPilot AI
+# Aegis
 
-FlowPilot AI is a cloud-native multi-agent productivity system built to turn a vague user goal into a structured execution workflow. Instead of stopping at recommendations, the system plans the work, converts that plan into tool actions, records the resulting artifacts, and exposes the full state back to the user through a Google ADK interface.
+Aegis is a cloud-native multi-agent productivity system built to turn a vague user goal into a structured, executable workflow. Instead of stopping at recommendations, Aegis plans the work, converts that plan into tool actions, records the resulting artifacts, and exposes the state of execution back to the user through a Google ADK interface.
 
-This project was designed as a practical answer to a common product gap in AI assistants: most systems can suggest what a user should do next, but very few can coordinate planning, execution, and observable follow-through in a way that feels like a real operations workflow. FlowPilot AI closes that gap by combining a master agent with specialized planning, execution, and tool services in a deployable Google Cloud architecture.
+This project was designed to address a common gap in modern AI assistants: many systems can generate advice, but very few can coordinate planning, execution, and visible follow-through in a way that resembles a real operational workflow. Aegis closes that gap by combining a master agent with specialized planning, execution, and tool services in a deployable Google Cloud architecture.
 
-![FlowPilot AI ADK UI](Deployed-snap1.png)
+## Product Snapshot
 
-## What the system does
+The first view shows Aegis processing a user request through the ADK interface, with the agent actively invoking the workflow.
 
-At a high level, the user gives the system a goal such as:
+![Aegis processing a user request](Deployed-snap1.png)
+
+The second view shows the agent returning a structured outcome after planning the work, scheduling the execution path, and drafting follow-up communication.
+
+![Aegis returning a structured execution response](Deployed-snap2.png)
+
+## What Aegis does
+
+At a high level, a user can give Aegis a goal such as:
 
 `Prepare me for a robotics presentation next Friday. Break it into tasks, schedule the work, and draft any follow-up communication.`
 
-FlowPilot AI then performs four major steps:
+Aegis then performs four major steps:
 
 1. It accepts the goal in a Google ADK-powered UI through the root agent.
 2. It sends the goal to a planning service that converts the request into a structured execution plan.
@@ -25,7 +33,7 @@ The result is a productivity system that can move from intent to action while st
 
 Modern productivity work is fragmented. A user may think through a task in one place, create action items in another, schedule time in a calendar, send updates separately, and still have no clean view of what was completed. Even when AI is introduced, the experience is often limited to advice or chat responses that never translate into operational outcomes.
 
-FlowPilot AI addresses that fragmentation by separating the workflow into specialized agents and services:
+Aegis addresses that fragmentation by separating the workflow into specialized agents and services:
 
 - one layer understands the user’s intent
 - one layer structures the work
@@ -121,7 +129,7 @@ That modularity matters for both hackathon judging and long-term product realism
 
 ## Google technologies used
 
-FlowPilot AI is designed around the Google AI and Google Cloud ecosystem:
+Aegis is designed around the Google AI and Google Cloud ecosystem:
 
 - **Google ADK** for the root agent and developer UI
 - **Gemini / Vertex AI** for structured planning when model-based planning is enabled
@@ -131,9 +139,15 @@ FlowPilot AI is designed around the Google AI and Google Cloud ecosystem:
 
 These choices support a strong deployment story. The project is not locked into a local prototype pattern; it is designed to be hosted as a real multi-service application with a secure interaction model.
 
+## What makes Aegis different
+
+Many AI productivity tools stop at suggestions. Aegis goes further by creating a closed loop between user intent, structured planning, executable actions, and observable workspace state.
+
+That difference matters because it changes the product from a passive assistant into an operational system. Instead of telling a user what they should probably do, Aegis can break work down, create records, schedule actions, draft communication, and return a stateful summary of what happened.
+
 ## Why this is more than a chatbot demo
 
-Many AI demos stop after generating a response. FlowPilot AI is stronger because it demonstrates:
+Many AI demos stop after generating a response. Aegis is stronger because it demonstrates:
 
 - intent understanding
 - structured decomposition
@@ -185,4 +199,4 @@ This makes the project a strong prototype not only because of what it does now, 
 
 If this README had to stand in for a verbal project presentation, the core message would be:
 
-FlowPilot AI is a multi-agent productivity system that transforms user intent into structured execution. It combines an ADK-powered root agent, a planner, an executor, and a centralized MCP tool layer to create a closed loop from goal intake to observable action. It is designed not as a toy chat demo, but as a cloud-native architecture that can realistically evolve into a production productivity platform.
+Aegis is a multi-agent productivity system that transforms user intent into structured execution. It combines an ADK-powered root agent, a planner, an executor, and a centralized MCP tool layer to create a closed loop from goal intake to observable action. It is designed not as a toy chat demo, but as a cloud-native architecture that can realistically evolve into a production productivity platform.
