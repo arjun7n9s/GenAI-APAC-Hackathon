@@ -116,7 +116,7 @@ def get_workspace_snapshot(workspace_id: str = "default") -> dict:
 
 
 root_agent = Agent(
-    name="productivity-agent",
+    name="productivity_agent",
     model="gemini-2.5-flash",
     description="Plans a productivity goal, executes it through specialized services, and can inspect workspace state.",
     instruction="""
